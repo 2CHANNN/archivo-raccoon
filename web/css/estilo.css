@@ -1,0 +1,109 @@
+:root {
+    --papel: #f4f1e7;
+    --tinta: #202921;
+    --verde: #284938;
+    --oxido: #943b27;
+    --linea: #c8c8b8;
+}
+
+body {
+    background: var(--papel);
+    color: var(--tinta);
+    font-family: system-ui, sans-serif;
+}
+
+.container { max-width: 1120px; }
+header, footer { background: var(--tinta); color: var(--papel); }
+.barra { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 1rem; }
+header a { color: inherit; text-decoration: none; }
+nav a { font-size: .88rem; }
+nav a:hover, .abrir:hover { text-decoration: underline; }
+.marca { font-family: Georgia, serif; font-size: 1.35rem; }
+.marca span { color: #e4a67f; margin-right: .3rem; }
+
+.portada {
+    position: relative;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+    gap: 1.5rem;
+    padding: clamp(1.6rem, 5vw, 4rem) 0;
+    border-bottom: 3px double var(--tinta);
+}
+
+.rotulo, .codigo, #estado {
+    font-family: ui-monospace, monospace;
+    font-size: .78rem;
+    letter-spacing: .045em;
+}
+
+.rotulo { text-transform: uppercase; color: var(--oxido); font-weight: 700; }
+h1, h2, h3 { font-family: Georgia, serif; }
+h1 { font-size: clamp(3.3rem, 7.4vw, 6.3rem); line-height: .93; letter-spacing: -.06em; }
+h1 em { color: var(--verde); font-weight: normal; }
+.bajada { max-width: 30rem; margin: 1.25rem 0 0; line-height: 1.55; }
+
+.ilustracion {
+    display: grid;
+    place-items: center;
+    min-height: 255px;
+    overflow: hidden;
+    background-color: #dce0ce;
+    background-image: linear-gradient(#50614120 1px, transparent 1px), linear-gradient(90deg, #50614120 1px, transparent 1px);
+    background-size: 18px 18px;
+    border: 1px solid var(--linea);
+}
+
+.hoja {
+    position: relative;
+    display: grid;
+    gap: 10px;
+    width: 66%;
+    padding: 14px 20px;
+    background: #e7d5ad;
+    border: 1px solid #6b6249;
+    box-shadow: 5px 6px #c6b587, 6px 7px #756b51, 9px 11px 12px #2b332b33;
+    transform: rotate(-7deg);
+}
+
+.hoja::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: -1px;
+    width: 40%;
+    height: 12px;
+    background: #e7d5ad;
+    border: 1px solid #6b6249;
+    border-bottom: 0;
+    border-radius: 4px 8px 0 0;
+}
+
+.hoja span { font: bold 13px monospace; letter-spacing: .2em; }
+.hoja b { font: bold clamp(1.6rem, 4vw, 3.5rem)/.98 Georgia, serif; color: var(--verde); }
+.hoja i { width: 72px; height: 13px; background: repeating-linear-gradient(90deg, var(--tinta) 0 2px, transparent 2px 4px); }
+
+#catalogo { padding: 2.3rem 0 4rem; }
+h2 { font-size: clamp(1.9rem, 4vw, 2.7rem); letter-spacing: -.04em; }
+.filtros { margin-block: .6rem 1.2rem; }
+.form-label { font-weight: 600; font-size: .9rem; }
+.form-control, .form-select { border-radius: 3px; border-color: #919784; padding-block: .65rem; background-color: #fffef8; }
+article { height: 100%; display: flex; flex-direction: column; padding: 1.3rem; border: 1px solid var(--linea); border-top: 3px solid var(--verde); background: #fcfbf5; }
+.datos { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; align-items: center; margin-bottom: 1.6rem; }
+.codigo { color: var(--oxido); font-weight: 700; }
+.juego { font-size: .75rem; padding: .2rem .48rem; background: #e4e9db; color: var(--verde); }
+h3 { font-size: 1.52rem; }
+article p { color: #50584e; font-size: .94rem; }
+.abrir { display: flex; justify-content: space-between; border: 0; border-top: 1px solid var(--linea); background: transparent; width: 100%; padding: .8rem 0 0; margin-top: auto; font-weight: 650; color: var(--verde); }
+footer { font-size: .85rem; }
+dialog { width: min(90vw, 32rem); border: 1px solid var(--verde); border-top: 6px solid var(--verde); background: var(--papel); color: var(--tinta); padding: 2rem; }
+dialog::backdrop { background: #1c261ed1; }
+:focus-visible { outline: 3px solid #b85c24; outline-offset: 3px; }
+
+@media (max-width: 640px) {
+    .container { padding-inline: 1.15rem; }
+    .portada { grid-template-columns: 1fr; }
+    .ilustracion { min-height: 145px; }
+    .hoja { width: 10rem; padding: 8px 12px; gap: 4px; }
+    .datos { margin-bottom: 1rem; }
+}

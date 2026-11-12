@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Luciano Olguin">
+    <title>Archivo Raccoon | Escenarios de Resident Evil</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/estilo.css">
+    <script src="/js/archivo.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container barra">
+            <a class="marca" href="#"><span aria-hidden="true">✦</span> Archivo Raccoon</a>
+            <nav aria-label="Principal"><a href="#catalogo">Expedientes ↓</a></nav>
+        </div>
+    </header>
+    <main class="container">
+        <section class="portada" aria-labelledby="titulo">
+            <div>
+                <p class="rotulo">Departamento de archivos · Resident Evil</p>
+                <h1 id="titulo">Atlas de<br><em>escenarios.</em></h1>
+                <p class="bajada">De las montañas Arklay al subsuelo de Raccoon City. Explora los lugares de las tres primeras entregas.</p>
+            </div>
+            <div class="ilustracion" aria-hidden="true">
+                <div class="hoja"><span>R.P.D.</span><b>ARCHIVO<br>DE CAMPO</b><i></i></div>
+            </div>
+        </section>
+        <section id="catalogo" aria-labelledby="subtitulo">
+            <h2 id="subtitulo">Índice de expedientes</h2>
+            <div class="row g-3 filtros">
+                <div class="col-md-8">
+                    <label class="form-label" for="busqueda">Buscar escenario</label>
+                    <input class="form-control" id="busqueda" type="search" placeholder="Ej. mansión, comisaría…">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label" for="juego">Entrega</label>
+                    <select class="form-select" id="juego"><option value="">Todas las entregas</option></select>
+                </div>
+            </div>
+            <p id="estado" role="status">Cargando expedientes…</p>
+            <div class="row g-3" id="lista"></div>
+        </section>
+    </main>
+    <footer><div class="container barra"><span>Archivo Raccoon</span><span>Luciano Olguin</span></div></footer>
+    <dialog id="ficha" aria-labelledby="nombreFicha">
+        <p class="rotulo" id="codigoFicha"></p>
+        <h2 id="nombreFicha"></h2>
+        <p id="detalleFicha" aria-live="polite"></p>
+        <form method="dialog"><button class="btn btn-dark">Cerrar expediente</button></form>
+    </dialog>
+    <template id="tarjeta">
+        <div class="col-md-6 col-lg-4">
+            <article>
+                <div class="datos"><span class="codigo"></span><span class="juego"></span></div>
+                <h3></h3>
+                <p></p>
+                <button type="button" class="abrir">Abrir expediente <span aria-hidden="true">↗</span></button>
+            </article>
+        </div>
+    </template>
+</body>
+</html>

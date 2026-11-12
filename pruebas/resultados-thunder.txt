@@ -1,0 +1,75 @@
+Processing Request...
+
+Request URL:  GET - http://127.0.0.1:8000/api/escenarios
+
+Status: 200 OK    Size: 829 Bytes    Time: 8 ms
+
+Response 
+[
+  {
+    "id": 1,
+    "nombre": "Mansión Spencer",
+    "juego": "Resident Evil",
+    "descripcion": "Una residencia aislada en las montañas Arklay."
+  },
+  {
+    "id": 2,
+    "nombre": "Residencia del personal",
+    "juego": "Resident Evil",
+    "descripcion": "Un edificio de servicio al otro lado del patio."
+  },
+  {
+    "id": 3,
+    "nombre": "Comisaría de Raccoon City",
+    "juego": "Resident Evil 2",
+    "descripcion": "Un antiguo museo convertido en estación de policía."
+  },
+  {
+    "id": 4,
+    "nombre": "Alcantarillas",
+    "juego": "Resident Evil 2",
+    "descripcion": "Una red de túneles bajo las calles de la ciudad."
+  },
+  {
+    "id": 5,
+    "nombre": "Laboratorio NEST",
+    "juego": "Resident Evil 2",
+    "descripcion": "Un centro de investigación subterráneo de Umbrella."
+  },
+  {
+    "id": 6,
+    "nombre": "Torre del Reloj",
+    "juego": "Resident Evil 3",
+    "descripcion": "Un punto de evacuación en medio del brote."
+  }
+] 
+
+ 
+Processing Request...
+
+Request URL:  GET - http://127.0.0.1:8000/api/escenarios/1
+
+Status: 200 OK    Size: 312 Bytes    Time: 14 ms
+
+Response 
+{
+  "id": 1,
+  "nombre": "Mansión Spencer",
+  "juego": "Resident Evil",
+  "descripcion": "Una residencia aislada en las montañas Arklay.",
+  "detalle": "El equipo S.T.A.R.S. busca refugio aquí tras un ataque en el bosque. Las llaves con emblemas conectan alas de la mansión y obligan a volver sobre los propios pasos."
+} 
+
+ 
+Processing Request...
+
+Request URL:  GET - http://127.0.0.1:8000/api/escenarios/99
+
+Status: 404 Not Found    Size: 37 Bytes    Time: 13 ms
+
+Response 
+{
+  "error": "Expediente no encontrado"
+} 
+
+ 
